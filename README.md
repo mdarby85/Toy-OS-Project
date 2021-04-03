@@ -37,8 +37,10 @@ ___
   In this section I will list any x86 instructions I used in this project and provide an explanation of each. Keep in mind that examples are shown in **little-endian** as that is how the Intel x86 and AMD64/x86-64 series of processors are interpreted.
 
 - `dw` = Define word. Generally 2 bytes on a typical x86 32-bit system.
+  
   Ex: `dw 0x1234  ; 0x34 0x12`
 - `dd` = Define double word. Generally 4 bytes on a typical x86 32-bit system.
+  
   Ex: `dd 0x12345678  ; 0x78 0x56 0x34 0x12`
   
 # 2. Architecture
