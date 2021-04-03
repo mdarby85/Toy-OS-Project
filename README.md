@@ -66,12 +66,15 @@ ___
 - Visual Studio Code
 - Docker
   - We're gonna take advantage of Docker to install GRUB, Netwide Assembler (NASM), and the specific gcc cross-compiler, gcc-cross-x86_64-elf.
+
   **Build**
   `docker build buildenv -t`*`<tagname of your choosing>`*
+
   **Deploy Container**
     - Linux/Mac OSX
   `docker run --rm -it -v $pwd:/root/env`*`<tagname of container from build step above>`*
      - Windows
   `docker run --rm -it -v %cd%:/root/env`*`<tagname of container from build step above>`*
+
 - QEMU
   - Allows me to emulate my OS instead of going through the hassle of installing it on my computer or loading it on a USB. 
