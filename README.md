@@ -14,7 +14,6 @@ ___
 - [3. Setup](#3-setup)
   - [3.1 Development Environment](#31-development-environment)
 
-
 # 1. Introduction
 
 - They say there are three things you have to do before you die: Write a book, have a child, and plant a tree. Those people are wrong. That list is actually 4 things long: Code your own bot, create a massive, useless framework that only you will ever use, write your own Linux kernel module, and create your own Operating System. Well, I've already built a couple of bots and, at least for now, one of those useless frameworks. After all, those aren't too bad since they're both well-suited for Python or Javascript. However, the last two on that list are gonna require you to use C :stuck_out_tongue:
@@ -73,10 +72,10 @@ ___
   `docker build buildenv -t`*`<tagname of your choosing>`*
 
   **Deploy Container**
-    - Linux/Mac OSX
-  `docker run --rm -it -v $pwd:/root/env`*`<tagname of container from build step above>`*
-     - Windows
+  - Linux/Mac OSX
+  `docker run --rm -it -v "$(pwd)":/root/env`*`<tagname of container from build step above>`*
+  - Windows
   `docker run --rm -it -v %cd%:/root/env`*`<tagname of container from build step above>`*
 
 - QEMU
-  - Allows me to emulate my OS instead of going through the hassle of installing it on my computer or loading it on a USB. 
+  - Allows me to emulate my OS instead of going through the hassle of installing it on my computer or loading it on a USB.
