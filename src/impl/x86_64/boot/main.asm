@@ -18,11 +18,16 @@ bits 32
 ; ==============================================================================
 ;                               start
 ; Prints 'OK' for now. In order to print characters to the screen, we must
-; write directly to "video memory". The CPU will hook the text stored at this
-; memory up to the screen. In order to do this, we'll use the mov instruction to
-; put some data into the address of video memory which begins at the address, 
-; 0xb8000. In this case, the text 'OK' is represented by the hex values
-; 0x4f = 'O' and 0x4b = 'K'
+; write directly to "video memory" due to the fact that we are in 'protected 
+; mode'. The CPU will hook the text stored at this memory up to the screen. In 
+; order to do this, we'll use the 'mov' instruction to put some data into the 
+; address of video memory which begins at the address, 0xb8000. In this case, 
+; the text 'OK' is represented by the ASCII hex values 0x4f='O' and 0x4b='K'.
+; The 0x2f you see in front of each ASCII code byte represents the required 
+; attribute byte for each character printed to the screen. The attribute byte 
+; carries the foreground color in its lowest 4 bits and the background color in 
+; its highest 3 bits. '2' represents a Green background and 'f' represents White
+; text.
 ; ==============================================================================
 start:
   ; print 'OK'
